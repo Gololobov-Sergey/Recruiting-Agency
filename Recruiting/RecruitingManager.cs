@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Recruiting
 {
@@ -286,9 +287,16 @@ namespace Recruiting
         public void DelItem(int id, string field, string table)
         {
             string sql = string.Format("DELETE FROM {0} WHERE {1} = {2};", table, field, id);
-            using (SqlCommand cmd = new SqlCommand(sql, this.sqlCon))
+            try
             {
-                cmd.ExecuteNonQuery();
+                using (SqlCommand cmd = new SqlCommand(sql, this.sqlCon))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Данная запись ссылается на другие таблицы!", "Удаление не возможно!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 

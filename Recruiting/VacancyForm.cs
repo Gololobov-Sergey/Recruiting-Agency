@@ -29,8 +29,6 @@ namespace Recruiting
         FormMode Mode;
         Vacancy vacancy;
 
-        public event EventHandler ChangeID;
-
         public VacancyForm()
         {
             InitializeComponent();
@@ -89,6 +87,8 @@ namespace Recruiting
 		
 		private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
+            ID = (int)((DataRowView)bsVacancy.Current).Row.ItemArray[0];
+            bsVacancy.CancelEdit();
             (this.MdiParent as MainForm).MainForm_DelVacancy(ID, e);
             (this.MdiParent as MainForm).vacancyToolStripMenuItem_Click(sender, e);
         }
@@ -156,13 +156,13 @@ namespace Recruiting
 
         private void vacancyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FilterString = string.Format("Name = '{0}'", cmbEmployer.Text);
+            FilterString = string.Format("Name = '{0}'", (string)((DataRowView)bsVacancy.Current).Row.ItemArray[9]);
             (this.MdiParent as MainForm).employersToolStripMenuItem_Click(FilterString, e);
         }
 
         private void resumeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FilterString = string.Format("NamePosition = '{0}'", cmbPosition.Text);
+            FilterString = string.Format("NamePosition = '{0}'", (string)((DataRowView)bsVacancy.Current).Row.ItemArray[1]);
             (this.MdiParent as MainForm).resumeToolStripMenuItem_Click(FilterString, e);
         }
 		
@@ -232,22 +232,6 @@ namespace Recruiting
             }
             if (listFilter.Count > 0)
                 FilterString += listFilter[listFilter.Count - 1];
-        }
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex != -1)
-                ID = (int)dataGridView1[0, e.RowIndex].Value;
-        }
-
-        private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
-        {
-            ID = (int)dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["ID"].Value;
-        }
-
-        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
-        {
-            ID = (int)dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["ID"].Value;
         }
     }
 }

@@ -173,14 +173,14 @@
             // applicantToolStripMenuItem
             // 
             this.applicantToolStripMenuItem.Name = "applicantToolStripMenuItem";
-            this.applicantToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.applicantToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.applicantToolStripMenuItem.Text = "Applicant";
             this.applicantToolStripMenuItem.Click += new System.EventHandler(this.applicantToolStripMenuItem_Click);
             // 
             // vacancyToolStripMenuItem
             // 
             this.vacancyToolStripMenuItem.Name = "vacancyToolStripMenuItem";
-            this.vacancyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vacancyToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.vacancyToolStripMenuItem.Text = "Vacancy";
             this.vacancyToolStripMenuItem.Click += new System.EventHandler(this.vacancyToolStripMenuItem_Click);
             // 
@@ -211,7 +211,6 @@
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
-            this.bindingNavigatorMovePreviousItem.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
             // 
             // bindingNavigatorSeparator
             // 
@@ -240,7 +239,6 @@
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
-            this.bindingNavigatorMoveNextItem.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem_Click);
             // 
             // bindingNavigatorMoveLastItem
             // 
@@ -302,7 +300,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(678, 316);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // tabPage2
             // 

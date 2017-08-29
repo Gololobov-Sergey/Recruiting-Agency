@@ -130,6 +130,8 @@ namespace Recruiting
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
+            ID = (int)((DataRowView)bsSetting.Current).Row.ItemArray[0];
+            bsSetting.CancelEdit();
             (this.MdiParent as MainForm).MainForm_DelSetting(this, e);
             switch (Table)
             {
@@ -145,22 +147,6 @@ namespace Recruiting
                 default:
                     break;
             }
-        }
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex != -1)
-                ID = (int)dataGridView1[0, e.RowIndex].Value;
-        }
-
-        private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
-        {
-            ID = (int)dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["ID"].Value;
-        }
-
-        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
-        {
-            ID = (int)dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["ID"].Value;
         }
 
         private void toolStripButEdit_Click(object sender, EventArgs e)

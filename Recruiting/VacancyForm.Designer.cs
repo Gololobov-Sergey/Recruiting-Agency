@@ -92,7 +92,7 @@
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
-            this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.bindingNavigator1.DeleteItem = null;
             this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorAddNewItem,
@@ -174,14 +174,14 @@
             // emplToolStripMenuItem
             // 
             this.emplToolStripMenuItem.Name = "emplToolStripMenuItem";
-            this.emplToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.emplToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.emplToolStripMenuItem.Text = "Employers";
             this.emplToolStripMenuItem.Click += new System.EventHandler(this.vacancyToolStripMenuItem_Click);
             // 
             // resumeToolStripMenuItem
             // 
             this.resumeToolStripMenuItem.Name = "resumeToolStripMenuItem";
-            this.resumeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.resumeToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.resumeToolStripMenuItem.Text = "Resume";
             this.resumeToolStripMenuItem.Click += new System.EventHandler(this.resumeToolStripMenuItem_Click);
             // 
@@ -212,7 +212,6 @@
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
-            this.bindingNavigatorMovePreviousItem.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
             // 
             // bindingNavigatorSeparator
             // 
@@ -241,7 +240,6 @@
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
-            this.bindingNavigatorMoveNextItem.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem_Click);
             // 
             // bindingNavigatorMoveLastItem
             // 
@@ -313,7 +311,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(681, 319);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // tabPage2
             // 
