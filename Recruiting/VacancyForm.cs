@@ -149,6 +149,7 @@ namespace Recruiting
 		
 		private void Vacancy_FormClosing(object sender, FormClosingEventArgs e)
         {
+            (this.MdiParent as MainForm).vacancyToolStripMenuItem1.Visible = false;
             FilterString = null;
             e.Cancel = true;
             this.Hide();

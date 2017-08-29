@@ -73,6 +73,9 @@ namespace Recruiting
 
         private void SettingForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            (this.MdiParent as MainForm).positionToolStripMenuItem1.Visible = false;
+            (this.MdiParent as MainForm).workTimeToolStripMenuItem.Visible = false;
+            (this.MdiParent as MainForm).educationToolStripMenuItem1.Visible = false;
             txtID.DataBindings.Clear();
             txtName.DataBindings.Clear();
             e.Cancel = true;

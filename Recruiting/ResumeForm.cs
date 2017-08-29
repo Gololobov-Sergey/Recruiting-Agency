@@ -145,6 +145,7 @@ namespace Recruiting
 		
         private void ResumeForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            (this.MdiParent as MainForm).resumeToolStripMenuItem1.Visible = false;
             FilterString = null;
             e.Cancel = true;
             this.Hide();

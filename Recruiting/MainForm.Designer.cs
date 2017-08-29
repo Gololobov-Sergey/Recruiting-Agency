@@ -47,6 +47,7 @@
             this.workTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearBaseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.educationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,6 +138,7 @@
             this.resumeToolStripMenuItem1,
             this.positionToolStripMenuItem1,
             this.workTimeToolStripMenuItem,
+            this.educationToolStripMenuItem1,
             this.clearBaseToolStripMenuItem1});
             this.windowsToolStripMenuItem.Name = "windowsToolStripMenuItem";
             this.windowsToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
@@ -145,51 +147,58 @@
             // employerToolStripMenuItem
             // 
             this.employerToolStripMenuItem.Name = "employerToolStripMenuItem";
-            this.employerToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.employerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.employerToolStripMenuItem.Text = "Employers";
             this.employerToolStripMenuItem.Visible = false;
+            this.employerToolStripMenuItem.Click += new System.EventHandler(this.employerToolStripMenuItem_Click);
             // 
             // vacancyToolStripMenuItem1
             // 
             this.vacancyToolStripMenuItem1.Name = "vacancyToolStripMenuItem1";
-            this.vacancyToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.vacancyToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.vacancyToolStripMenuItem1.Text = "Vacancy";
             this.vacancyToolStripMenuItem1.Visible = false;
+            this.vacancyToolStripMenuItem1.Click += new System.EventHandler(this.vacancyToolStripMenuItem1_Click);
             // 
             // applicantsToolStripMenuItem
             // 
             this.applicantsToolStripMenuItem.Name = "applicantsToolStripMenuItem";
-            this.applicantsToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.applicantsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.applicantsToolStripMenuItem.Text = "Applicants";
             this.applicantsToolStripMenuItem.Visible = false;
+            this.applicantsToolStripMenuItem.Click += new System.EventHandler(this.applicantsToolStripMenuItem_Click);
             // 
             // resumeToolStripMenuItem1
             // 
             this.resumeToolStripMenuItem1.Name = "resumeToolStripMenuItem1";
-            this.resumeToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.resumeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.resumeToolStripMenuItem1.Text = "Resume";
             this.resumeToolStripMenuItem1.Visible = false;
+            this.resumeToolStripMenuItem1.Click += new System.EventHandler(this.resumeToolStripMenuItem1_Click);
             // 
             // positionToolStripMenuItem1
             // 
             this.positionToolStripMenuItem1.Name = "positionToolStripMenuItem1";
-            this.positionToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.positionToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.positionToolStripMenuItem1.Text = "Position";
             this.positionToolStripMenuItem1.Visible = false;
+            this.positionToolStripMenuItem1.Click += new System.EventHandler(this.positionToolStripMenuItem1_Click);
             // 
             // workTimeToolStripMenuItem
             // 
             this.workTimeToolStripMenuItem.Name = "workTimeToolStripMenuItem";
-            this.workTimeToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.workTimeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.workTimeToolStripMenuItem.Text = "Work time";
             this.workTimeToolStripMenuItem.Visible = false;
+            this.workTimeToolStripMenuItem.Click += new System.EventHandler(this.workTimeToolStripMenuItem_Click);
             // 
             // clearBaseToolStripMenuItem1
             // 
             this.clearBaseToolStripMenuItem1.Name = "clearBaseToolStripMenuItem1";
-            this.clearBaseToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.clearBaseToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.clearBaseToolStripMenuItem1.Text = "Clear base";
             this.clearBaseToolStripMenuItem1.Visible = false;
+            this.clearBaseToolStripMenuItem1.Click += new System.EventHandler(this.clearBaseToolStripMenuItem1_Click);
             // 
             // statusStrip1
             // 
@@ -198,6 +207,14 @@
             this.statusStrip1.Size = new System.Drawing.Size(856, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // educationToolStripMenuItem1
+            // 
+            this.educationToolStripMenuItem1.Name = "educationToolStripMenuItem1";
+            this.educationToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.educationToolStripMenuItem1.Text = "Education";
+            this.educationToolStripMenuItem1.Visible = false;
+            this.educationToolStripMenuItem1.Click += new System.EventHandler(this.educationToolStripMenuItem1_Click);
             // 
             // MainForm
             // 
@@ -229,17 +246,18 @@
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem positionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem workTimesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem windowsToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripMenuItem clearBaseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem employerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vacancyToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem applicantsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem resumeToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem positionToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem workTimeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clearBaseToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem educationToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem windowsToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem employerToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem vacancyToolStripMenuItem1;
+        public System.Windows.Forms.ToolStripMenuItem applicantsToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem resumeToolStripMenuItem1;
+        public System.Windows.Forms.ToolStripMenuItem positionToolStripMenuItem1;
+        public System.Windows.Forms.ToolStripMenuItem workTimeToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem clearBaseToolStripMenuItem1;
+        public System.Windows.Forms.ToolStripMenuItem educationToolStripMenuItem1;
     }
 }
 

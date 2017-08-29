@@ -17,12 +17,6 @@ namespace Recruiting
         public event EventHandler ApplicantEvent;
         public event EventHandler ResumeEvent;
 
-        public void MainForm_ClearBase(object sender, EventArgs e)
-        {
-            if (ClearBase != null)
-                ClearBase(sender, e);
-        }
-
         public event EventHandler AddEmployer;
         public event EventHandler EditEmployer;
         public event EventHandler DelEmployer;
@@ -125,6 +119,7 @@ namespace Recruiting
             vacancy.RefreshForm();
             vacancy.Show();
             vacancy.Activate();
+            vacancyToolStripMenuItem1.Visible = true;
         }
 
         public void MainForm_AddVacancy(object sender, EventArgs e)
@@ -164,6 +159,7 @@ namespace Recruiting
             applicant.RefreshForm();
             applicant.Show();
             applicant.Activate();
+            applicantsToolStripMenuItem.Visible = true;
         }
 
         public void MainForm_EditApplicant(object sender, EventArgs e)
@@ -205,6 +201,7 @@ namespace Recruiting
             resume.RefreshForm();
             resume.Show();
             resume.Activate();
+            resumeToolStripMenuItem1.Visible = true;
         }
 
         public void MainForm_AddResume(object sender, EventArgs e)
@@ -227,6 +224,7 @@ namespace Recruiting
 
         #endregion
 
+        #region Settings
         public void positionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (setting == null)
@@ -245,6 +243,9 @@ namespace Recruiting
             setting.RefreshForm();
             setting.Show();
             setting.Activate();
+            positionToolStripMenuItem1.Visible = true;
+            workTimeToolStripMenuItem.Visible = false;
+            educationToolStripMenuItem1.Visible = false;
         }
 
         public void workTimesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -265,6 +266,9 @@ namespace Recruiting
             setting.RefreshForm();
             setting.Show();
             setting.Activate();
+            positionToolStripMenuItem1.Visible = false;
+            workTimeToolStripMenuItem.Visible = true;
+            educationToolStripMenuItem1.Visible = false;
         }
 
         public void educationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -285,6 +289,9 @@ namespace Recruiting
             setting.RefreshForm();
             setting.Show();
             setting.Activate();
+            positionToolStripMenuItem1.Visible = false;
+            workTimeToolStripMenuItem.Visible = false;
+            educationToolStripMenuItem1.Visible = true;
         }
 
         public void MainForm_AddSetting(object sender, EventArgs e)
@@ -304,6 +311,7 @@ namespace Recruiting
             if (EditSetting != null)
                 EditSetting(sender, EventArgs.Empty);
         }
+        #endregion
 
         public void clearBaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -314,5 +322,53 @@ namespace Recruiting
             }
             clearBase.Show();
         }
+
+        public void MainForm_ClearBase(object sender, EventArgs e)
+        {
+            if (ClearBase != null)
+                ClearBase(sender, e);
+        }
+
+        #region Menu
+        private void employerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            employersToolStripMenuItem_Click(sender, e);
+        }
+
+        private void vacancyToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            vacancyToolStripMenuItem_Click(sender, e);
+        }
+
+        private void applicantsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            applicantToolStripMenuItem_Click(sender, e);
+        }
+
+        private void resumeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            resumeToolStripMenuItem_Click(sender, e);
+        }
+
+        private void positionToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            positionToolStripMenuItem_Click(sender, e);
+        }
+
+        private void workTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            workTimesToolStripMenuItem_Click(sender, e);
+        }
+
+        private void educationToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            educationToolStripMenuItem_Click(sender, e);
+        }
+
+        private void clearBaseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            clearBaseToolStripMenuItem_Click(sender, e);
+        }
+        #endregion
     }
 }

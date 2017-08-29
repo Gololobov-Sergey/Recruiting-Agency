@@ -141,6 +141,7 @@ namespace Recruiting
 
         private void ApplicantsForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            (this.MdiParent as MainForm).applicantsToolStripMenuItem.Visible = false;
             FilterString = null;
             e.Cancel = true;
             this.Hide();
